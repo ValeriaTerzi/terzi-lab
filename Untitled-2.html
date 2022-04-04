@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/> 
+
+    <title>Пример Bootstrap</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="Style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/jquery-min.js"></script>
+    <script src="main.js"></script>
+  <style>
+    form{
+background-color:#ffffff;
+width:70%;
+margin:0 auto;
+padding:15px;
+}
+  </style>
+    
+  </head> 
+  <body>
+     
+
+      
+      <div class="row">
+    
+        <div class="col-sm-6" style="background-color:rgb(255, 255, 255)" > <img src="LogoHeader.png"></div>
+    
+
+        <div class = col-sm-6>
+        <div class="col-sm-3"style="background-color:#ffffff" ><h3>Home</h3></div>
+        <div class="col-sm-3" style="background-color:#ffffff" > <h3>Products</h3></div>
+        <div class="col-sm-3"style="background-color:#ffffff" ><h3>Services</h3></div>
+        <div class="col-sm-3" style="background-color:#ffffff" > <h3>Contact</h3></div>
+        </div>
+  </div>
+
+      <div class="twopast">
+      <div class="row">
+        
+        <div class=" col-sm-2"> <img class="arrowLeft" src="ArrowLeftSlider.png"  > </div>
+        <div class="col-sm-4" ><img class="iphone" src="IPhoneSlider.png"></div>        
+        <div class=" col-sm-4" style="padding-top: 150px ; color: #ffffff;"> <div class="text"> <h2>Lorem Ipsum is simply</h2><h3><br>dummy text of the <br> printng&typesetting<br></h3>  <br> <img class="button" src="ButtonHeader.png"></div></div>
+        <div class=" col-sm-2"> <img class="arrowRight" src="ArrowRightSlider.png" > </div>
+      
+      </div>
+    </div>
+      <br><br>
+      
+      <div class="row">
+        <div class="pr1" style="text-align: center;">
+        <div class="col-sm-4"> <img  src="Product1.png"> <br><h3 style="color: blue;">Contary to popular</h3> <h4 style="color: gray; ">Lorem Ipsum is not simply random text. <br>It has room in a piece.</h4></div>
+        <div class="col-sm-4"> <img  src="Product2.png"> <br><h3 style="color: blue;"> Contary to popular</h3> <h4 style="color: gray;" >Lorem Ipsum is not simply random text. <br>It has room in a piece.</h4></div>
+        <div class=" col-sm-4"> <img  src="Product3.png"><br><h3 style="color: blue; "> Contary to popular</h3> <h4 style="color: gray;" >Lorem Ipsum is not simply random text. <br>It has room in a piece.</h4></div>
+      </div>
+    </div>
+    
+    <div class="row">
+      
+       <br><br>
+      <div class="row">
+       
+    <div class="shoppingCart"> <div class=" col-sm-6"  style=" padding-left: 110px; text-align: center; "><h2 style = "color:gray; text-align: center;">The Shopping Cart</h2><br> <img src="ShoppingCart.png"></div></div>
+      <div class="text2"> <div class=" col-sm-6"  > <h2 style="color: gray; text-align: left; ">Some Bullet text here</h2> <h4 style="color: gray; text-align: left;"><div id="flip">Нажмите, чтобы увидеть подробности</div><div id="panel"> United States is considered to be one of the countries with the largest territories. It is situated in North America, an amazing continent with its beautiful nature and diverse climatic zones. 
+        The country’s landscape includes both high mountains and flat prairies. The weather conditions range from arctic cold in the northern parts to tropical heat in the southern parts. The main water bodies on the territory of the USA include  such rivers as Mississippi, Missouri, the Rio Grande. 
+        These rivers provide a sufficient amount of drinking water to supply the nation. They also serve as vital sources of irrigation for farming.</h4></div></div>
+      </div>
+    </div>
+
+      <br> <br>
+    
+    <div href="#" id="modal">
+        <div class="col-md-8 orderInfo">
+          <legend>Форма обратной связи</legend>
+          <div class="row">
+              <div class="col-md-4">Ваше имя:</div>
+              <div class="col-md-4"><input class="form-control" id="first" type="text" onblur="checkFirst();" required /></div>
+                                <div class="col-md-4"><span id="first_Check"></span></div>
+          </div>
+          <div class="row">
+              <div class="col-md-4">Ваш возраст:</div>
+              <div class="col-md-4"><input class="form-control" id="age" type="number" min="18" max="65" required /></div>
+              <div class="col-md-4"></div>
+          </div>
+          <div class="row">
+              <div class="col-md-4">Ваш телефон:</div>
+              <div class="col-md-4"><input class="form-control" id="phone" type="text" onblur="checkPhone();" placeholder="xxx-xxx-xxx" required /></div>
+              <div class="col-md-4"><span id="phone_Check"></span></div>
+          </div>
+          <div class="row">
+              <div class="col-md-4">Ваша почта:</div>
+              <div class="col-md-4"><input class="form-control" id="mail" type="text" onblur="checkMail();" required /></div>
+              <div class="col-md-4"><span id="mail_Check"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">Что вас интересует?</div>
+            <div class="col-md-4"><textarea class="message" name="message" id="message" cols="40" rows="6" maxlength="350"></textarea></div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 order"><span id="sendOrder" onclick="outputData();"><div class="send"> Отправить</div></span></div>
+      </div>
+      </div>
+    </div>
+    
+       <!--Order summary-->
+      
+       
+       <div style="padding-top: 400px;">                
+        <span id="summary"></span>
+       </div>
+
+    
+      
+  </div>
+
+      <div class="row">
+       
+        <div class=" col-sm-12" style="background-color:rgb(255, 255, 255); text-align: center;" > <h4 style = "color:gray" >Copyright Ⓒ 2012-2013 </h4></div>
+      </div>
+      <a href="#" id="scroll_top" title="Наверх"></a>
+ </body>
+</html>
